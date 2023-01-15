@@ -49,3 +49,24 @@ function operateFun(num1, num2, operatorValue) {
         return percentage(num1)
     }
   };
+
+
+//  4 . Create the functions that populate the display when you click the number buttons. 
+
+let inputBox = document.querySelector('input')
+let numberButtons = document.querySelector('.numberButton')
+let opretionButtons = document.querySelectorAll('.opretion')
+let clearButton = document.querySelector('.acClearAll')
+let quealButton = document.querySelector('.opretionButton')
+let dotButton = document.querySelector('.dotButton')
+
+let inputBoxstring = "";
+let arrayFromInputBox = [];
+let num1 = "";
+let num2 = "";
+let operatorValue = "";
+let found_Operator = false;
+let dotAdd = false;
+let result;
+let nu;
+let valueCheckerArray = ["1","2","3","4","5","6","7","8","9","0"]
