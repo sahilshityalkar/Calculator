@@ -30,3 +30,22 @@ function division(a, b) {
 function percentage(a){
   return a % a;
 }
+
+
+// 2 . Create a new function operate() that takes an operator and 2 numbers and then calls one of the above functions on the numbers.
+function operateFun(num1, num2, operatorValue) {
+    num1 = Number(num1)
+   num2 = Number(num2)
+    switch (operatorValue) {
+      case "+":
+        return addition(num1, num2);
+      case "-":
+        return subtraction(num1, num2);
+      case "*":
+        return multiplication(num1, num2);
+      case "/":
+        return division(num1, num2);
+      case "%":
+        return percentage(num1)
+    }
+  };
