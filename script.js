@@ -86,3 +86,26 @@ function scanArray(arrayFromInputBox){
       num1 += arrayFromInputBox[i];
       dotAdd = true;
      }
+     else if (arrayFromInputBox[i] =='+'||arrayFromInputBox[i] =='%'||arrayFromInputBox[i] =='-'||arrayFromInputBox[i] =='*'||arrayFromInputBox[i] =='/'){
+      if (found_Operator == true) {
+        operatorValue = arrayFromInputBox[i];
+        dotAdd = false;
+      }
+      else{
+          found_Operator = true;
+          dotAdd = false;
+          operatorValue = arrayFromInputBox[i];
+      }
+     }
+     else if (arrayFromInputBox[i] === "." && dotAdd == false && found_Operator == true){
+      num2 += arrayFromInputBox[i];
+      dotAdd = true;
+     }
+     else if (arrayFromInputBox[i] in valueCheckerArray && found_Operator == false){
+      num1 += arrayFromInputBox[i];
+     }
+     else if (arrayFromInputBox[i] in valueCheckerArray && found_Operator == true){
+      num2 += arrayFromInputBox[i];
+     }
+  }
+}
