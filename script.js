@@ -70,3 +70,19 @@ let dotAdd = false;
 let result;
 let nu;
 let valueCheckerArray = ["1","2","3","4","5","6","7","8","9","0"]
+
+
+// this function is scan the array values and return the num1 num2 and opreater
+function scanArray(arrayFromInputBox){
+  for(let i = 0; i < arrayFromInputBox.length; i++){
+     if(arrayFromInputBox[i] in valueCheckerArray && found_Operator == false){
+      num1 += arrayFromInputBox[i];
+     }
+    //  else if (arrayFromInputBox[i] =='+'||arrayFromInputBox[i] =='%'||arrayFromInputBox[i] =='-'||arrayFromInputBox[i] =='*'||arrayFromInputBox[i] =='/'
+    //           && found_Operator == false){
+    //   num1 += arrayFromInputBox[i];
+    //  }
+     else if (arrayFromInputBox[i] === "." && dotAdd == false && found_Operator == false){
+      num1 += arrayFromInputBox[i];
+      dotAdd = true;
+     }
