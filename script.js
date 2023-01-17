@@ -118,3 +118,32 @@ function unfind(){
     inputBox.value = 0;
   }
 }
+
+
+//this function perfectly enter the value in input box 
+let dotDisplay = false;
+function display(value){
+  let found_module = false;
+    if (value == "." && dotDisplay == false){
+      document.getElementById("inputvalue").value += value;
+      dotDisplay = true;
+    }
+    else if (value == "%" && inputBox.value == "" && found_module == false){
+      document.getElementById("inputvalue").value += value;
+      found_module = true;      
+    }
+    //     Extra Credit
+    // Users can get floating point numbers if they do the math required to get one, but they can’t type them in yet. Add a . button
+    // and let users input decimals! Make sure you don’t let them type more than one though: 12.3.56.5. It is hard to do math on these 
+    // numbers. (disable the decimal button if there’s already one in the display)
+    else if(value == "." && dotDisplay == true){
+      dotDisplay = true
+    }
+    else if (value == "/" || value == "*" ||value == "-" ||value == "+" ||dotDisplay == true){
+      dotDisplay = false;
+      document.getElementById("inputvalue").value += value;
+    }
+    else {
+      document.getElementById("inputvalue").value += value;
+    }
+  }
