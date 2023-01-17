@@ -109,3 +109,12 @@ function scanArray(arrayFromInputBox){
      }
   }
 }
+
+
+// this function when return value undefined ex: 0*0
+unfind(inputBox.value);
+function unfind(){
+  if (inputBox.value == undefined){
+    inputBox.value = 0;
+  }
+}
